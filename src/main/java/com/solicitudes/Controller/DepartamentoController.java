@@ -18,7 +18,7 @@ public class DepartamentoController {
     @Autowired
     DepartamentoService departamentoService;
 
-    @GetMapping("/solicitudes")
+    @GetMapping("/departamentos")
     public ResponseEntity<List<Departamento>> getDepartamentos(){
         return new ResponseEntity<>(departamentoService.getAll(), HttpStatus.OK);
     }

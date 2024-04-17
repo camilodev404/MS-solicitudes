@@ -22,6 +22,11 @@ public class SolicitudController {
         return new ResponseEntity<>(solicitudService.getAll(), HttpStatus.OK);
     }
 
+    @GetMapping("/func/{idFuncionario}")
+    public ResponseEntity<List<Solicitud>> getSolicitudesFunc(@PathVariable("idFuncionario") String idFuncionario){
+        return new ResponseEntity<>(solicitudService.getByFunc(idFuncionario), HttpStatus.OK);
+    }
+
     @GetMapping("/{nroFormulario}")
     public ResponseEntity<Solicitud> solicitudById(@PathVariable("nroFormulario") String nroFormulario){
         return solicitudService.getById(nroFormulario).map(solicitud -> new ResponseEntity<>(solicitud, HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));

@@ -14,16 +14,16 @@ public class Solicitud {
 
     private Date fecha;
 
-    @Column(name = "idformularios")
+    @Column(name = "idfuncionario")
     private String idFuncionario;
 
-    @Column(name = "idmunicipioformilarios")
+    @Column(name = "idmunicipioformularios")
     private String idMunicipio;
 
     @Column(name = "tipoentrada")
     private String tipoEntrada;
 
-    @Column(name = "idbarido")
+    @Column(name = "idbarrido")
     private String idBarrido;
 
     @Column(name = "declaroverdad")
@@ -77,7 +77,7 @@ public class Solicitud {
     @Column(name = "tieneexperiencia")
     private Boolean tieneExperiencia;
 
-    @Column(name = "cualescuando")
+    @Column(name = "cualescuanto")
     private String cualesCuanto;
 
     @Column(name = "haentregadopredios")

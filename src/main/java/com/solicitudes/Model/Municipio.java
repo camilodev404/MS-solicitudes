@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class Municipio {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "idmunicipioformularios")
     private String idMunicipio;
 
     private String nombre;

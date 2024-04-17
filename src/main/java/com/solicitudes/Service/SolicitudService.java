@@ -18,6 +18,10 @@ public class SolicitudService {
         return solicitudRepository.findAll();
     }
 
+    public List<Solicitud> getByFunc(String idFuncionario) {
+        return solicitudRepository.findByFunc(idFuncionario);
+    }
+
     public Optional<Solicitud> getById(String nroFormulario){
         return solicitudRepository.findById(nroFormulario);
     }
