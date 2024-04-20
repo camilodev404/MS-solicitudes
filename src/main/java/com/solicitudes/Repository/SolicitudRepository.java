@@ -14,4 +14,7 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, String> {
     @Query("SELECT m FROM Solicitud m WHERE m.idFuncionario = :idFuncionario")
     List<Solicitud> findByFunc(@Param("idFuncionario") String idFuncionario);
 
+    @Query("SELECT s FROM Solicitud s WHERE s.foranea.cedula = :cedula")
+    List<Solicitud> findByCedula(@Param("cedula") String cedula);
+
 }

@@ -22,6 +22,10 @@ public class SolicitudService {
         return solicitudRepository.findByFunc(idFuncionario);
     }
 
+    public List<Solicitud> getByCedula(String cedula){
+        return solicitudRepository.findByCedula(cedula);
+    }
+
     public Optional<Solicitud> getById(String nroFormulario){
         return solicitudRepository.findById(nroFormulario);
     }
