@@ -2,6 +2,7 @@ package com.solicitudes.Controller;
 
 import com.solicitudes.Model.Solicitud;
 import com.solicitudes.Service.SolicitudService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/solicitud")
 @CrossOrigin("*")
+@Tag(name = "Solicitudes")
 public class SolicitudController {
 
     @Autowired
